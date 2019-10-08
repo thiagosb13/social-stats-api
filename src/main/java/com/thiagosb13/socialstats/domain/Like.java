@@ -1,5 +1,6 @@
 package com.thiagosb13.socialstats.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.neo4j.ogm.annotation.EndNode;
 import org.neo4j.ogm.annotation.GeneratedValue;
 import org.neo4j.ogm.annotation.Id;
@@ -19,6 +20,7 @@ public class Like {
     @StartNode
     private User user;
 
+    @JsonIgnore
     @EndNode
     private Resource resource;
 

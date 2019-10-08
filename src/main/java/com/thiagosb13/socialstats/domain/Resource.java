@@ -16,6 +16,17 @@ public class Resource {
     @GeneratedValue
     private Long id;
 
+    public Resource() {
+    }
+
+    public Resource(String type, String resourceId) {
+        this.resourceId = resourceId;
+        this.type = type;
+    }
+
+    @Property
+    private String resourceId;
+
     @Property
     private String type;
 
@@ -31,6 +42,14 @@ public class Resource {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getResourceId() {
+        return resourceId;
+    }
+
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     public String getType() {

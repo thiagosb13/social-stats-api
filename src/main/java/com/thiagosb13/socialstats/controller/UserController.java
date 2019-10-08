@@ -25,7 +25,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping()
+    @GetMapping
     @ResponseStatus(OK)
     public List<User> findByName(@RequestParam(name = "name") String name) {
         return userService.findByName(name);
